@@ -1,0 +1,155 @@
+:root {
+  --ink: #17293a;
+  --muted: #607080;
+  --line: #d9e0e5;
+  --accent: #1d6485;
+  --paper: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+main,
+footer {
+  width: min(880px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.intro {
+  padding: 90px 0 66px;
+  border-bottom: 1px solid var(--line);
+}
+
+h1 {
+  margin: 0 0 15px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.4rem, 9vw, 6rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  color: var(--muted);
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover { color: var(--ink); }
+
+section { padding: 62px 0 18px; }
+
+h2 {
+  margin: 0 0 28px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.topic-list,
+.experience-list,
+.publication-list,
+.award-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.topic-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.topic-list li {
+  padding: 7px 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+
+.experience-list,
+.publication-list,
+.award-list {
+  border-top: 1px solid var(--line);
+}
+
+.experience-list li,
+.publication-list li {
+  padding: 25px 0 27px;
+  border-bottom: 1px solid var(--line);
+}
+
+.experience-list strong {
+  font-size: 1.02rem;
+}
+
+.experience-list p {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+h3 {
+  margin: 0 0 7px;
+  font-size: 1.08rem;
+  line-height: 1.45;
+}
+
+h3 a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+h3 a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.publication-list p {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.publication-list strong { color: var(--ink); }
+
+.award-list li {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.award-list strong { font-size: 0.95rem; }
+
+footer {
+  padding: 68px 0 34px;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+@media (max-width: 620px) {
+  main,
+  footer { width: min(100% - 30px, 880px); }
+  .intro { padding: 64px 0 48px; }
+  section { padding-top: 48px; }
+  h1 { font-size: 3.7rem; }
+}
